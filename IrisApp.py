@@ -28,6 +28,7 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/ShahirJalal/Iris_July/main/IRIS.csv')
+
 X = iris.drop('species',axis = 1)
 Y = iris['species']
 
@@ -38,11 +39,11 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(iris.target_names)
+st.write(['	Iris-setosa', '	Iris-versicolor', '	Iris-virginica'])
 
 st.subheader('Prediction')
-st.write(iris.target_names[prediction])
-#st.write(prediction)
+# st.write(iris.target_names[prediction])
+st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
