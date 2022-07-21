@@ -4,7 +4,6 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
 # Simple Iris Flower Prediction App
-
 This app predicts the **Iris flower** type!
 """)
 
@@ -27,10 +26,10 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-iris = pd.read_csv('https://raw.githubusercontent.com/ShahirJalal/Iris_July/main/IRIS.csv')
-
+iris = pd.read_csv('https://raw.githubusercontent.com/ismailbahrudin/iris-july/main/IRIS.csv')
 X = iris.drop('species',axis = 1)
 Y = iris['species']
+
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
@@ -39,12 +38,15 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-dataframe = pd.DataFrame(['Iris-setosa','Iris-versicolor','Iris-virginica'])
-st.write(dataframe)
+dataf= pd.DataFrame(['Iris-setosa','Iris-versicolor','Iris-virginica'])
+st.write(dataf)
 
 st.subheader('Prediction')
-# st.write(iris.target_names[prediction])
+#st.write(iris.target_names[prediction])
 st.write(prediction)
+#if prediction==('Iris-setosa')
+#then st.image("https://th.bing.com/th/id/OIP.oGI7l-2yK0rjRIGPDDFpawHaE8?w=306&h=204&c=7&r=0&o=5&pid=1.7")
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
+st.image("https://th.bing.com/th/id/OIP.oGI7l-2yK0rjRIGPDDFpawHaE8?w=306&h=204&c=7&r=0&o=5&pid=1.7")
