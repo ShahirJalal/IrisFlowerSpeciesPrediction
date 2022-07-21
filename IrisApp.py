@@ -27,9 +27,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-url = "https://raw.githubusercontent.com/ShahirJalal/Iris_July/main/IRIS.csv"
-
-iris = pd.read_csv(url)
+iris = pd.read_csv('https://raw.githubusercontent.com/ShahirJalal/Iris_July/main/IRIS.csv')
 X = iris.data
 Y = iris.target
 
