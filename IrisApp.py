@@ -49,4 +49,10 @@ st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
-st.image("https://th.bing.com/th/id/OIP.oGI7l-2yK0rjRIGPDDFpawHaE8?w=306&h=204&c=7&r=0&o=5&pid=1.7")
+
+if prediction == 'Iris-setosa':
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Irissetosa1.jpg/1200px-Irissetosa1.jpg")
+elif prediction == 'Iris-versicolor':
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Blue_Flag%2C_Ottawa.jpg/1024px-Blue_Flag%2C_Ottawa.jpg")
+elif prediction == 'Iris-virginica':
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Iris_virginica_2.jpg/900px-Iris_virginica_2.jpg")
