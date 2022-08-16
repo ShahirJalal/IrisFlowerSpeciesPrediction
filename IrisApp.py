@@ -26,7 +26,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-iris = pd.read_csv('https://raw.githubusercontent.com/ismailbahrudin/iris-july/main/IRIS.csv')
+iris = pd.read_csv('https://raw.githubusercontent.com/ShahirJalal/Iris_July/main/IRIS.csv')
 X = iris.drop('species',axis = 1)
 Y = iris['species']
 
@@ -42,10 +42,7 @@ dataf= pd.DataFrame(['Iris-setosa','Iris-versicolor','Iris-virginica'])
 st.write(dataf)
 
 st.subheader('Prediction')
-#st.write(iris.target_names[prediction])
 st.write(prediction)
-#if prediction==('Iris-setosa')
-#then st.image("https://th.bing.com/th/id/OIP.oGI7l-2yK0rjRIGPDDFpawHaE8?w=306&h=204&c=7&r=0&o=5&pid=1.7")
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
