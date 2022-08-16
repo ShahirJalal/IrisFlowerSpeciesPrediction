@@ -8,3 +8,5 @@
 - Instructions:
     - Move the sliders to change the parameters of Iris flower
 - It will display the image of the predicted Iris flower species
+- Tool used:
+    - Streamlit
